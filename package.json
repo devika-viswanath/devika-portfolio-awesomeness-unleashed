@@ -81,3 +81,11 @@
     "vite": "^5.4.1"
   }
 }
+
+"homepage": "https://devikaviswanath.tech",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
+  ...
+}
+
