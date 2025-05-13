@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center md:items-end">
             <p className="text-muted-foreground mb-2">© {new Date().getFullYear()} All Rights Reserved</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
+              <a href="mailto:devikaviswanath135@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</a>
             </div>
           </div>
@@ -23,10 +23,10 @@ const Footer: React.FC = () => {
         <div className="h-px w-full bg-gradient-to-r from-transparent via-muted-foreground/20 to-transparent my-6"></div>
         
         <div className="flex justify-center space-x-6">
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Twitter</a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">GitHub</a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a>
+          <a href="https://x.com/DevikaB116528" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Twitter</a>
+          <a href="https://www.linkedin.com/in/devikab-mca/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</a>
+          <a href="https://github.com/devika-viswanath" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">GitHub</a>
+          <a href="mailto:devikaviswanath135@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">Email</a>
         </div>
       </div>
     </footer>

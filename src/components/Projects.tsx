@@ -40,39 +40,14 @@ const Projects: React.FC = () => {
       title: "Mathematical Approach to Rubik's Cube",
       description: "Developed a comprehensive mathematical model to understand and solve Rubik's Cube puzzles using group theory and algorithms. Implemented solution algorithms based on mathematical principles.",
       technologies: ["Group Theory", "Algorithms", "Mathematical Modeling", "Computational Theory"],
-      image: "https://images.unsplash.com/photo-1598804767982-3033398a30cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+      // Using a reliable stock image of a Rubik's cube
+      image: "https://images.unsplash.com/photo-1577134351686-c6dca1c68d8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80",
       details: [
         "Applied group theory to analyze the structure and properties of the Rubik's Cube",
         "Developed mathematical models to represent the cube's state and transformations",
         "Implemented algorithms for solving the cube based on mathematical principles",
         "Analyzed the efficiency and complexity of different solving methods",
         "Created visualizations to demonstrate the mathematical concepts behind the cube"
-      ]
-    },
-    {
-      title: "Data Analysis and Visualization",
-      description: "Created a comprehensive data analysis tool using statistical methods to analyze and visualize complex datasets.",
-      technologies: ["Statistics", "Data Visualization", "Python", "Computational Methods"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-      details: [
-        "Implemented statistical models for data analysis",
-        "Created interactive visualizations for data exploration",
-        "Applied mathematical techniques for data preprocessing",
-        "Developed algorithms for pattern recognition in datasets",
-        "Integrated machine learning approaches for predictive analytics"
-      ]
-    },
-    {
-      title: "Algorithmic Problem Solving",
-      description: "Developed efficient algorithms for solving complex computational problems using mathematical principles.",
-      technologies: ["Algorithm Design", "Computational Complexity", "Optimization", "Data Structures"],
-      image: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-      details: [
-        "Designed algorithms for solving complex mathematical problems",
-        "Analyzed the computational complexity of various algorithms",
-        "Implemented optimization techniques to improve efficiency",
-        "Applied mathematical theorems to develop novel algorithmic approaches",
-        "Developed solutions for real-world computational challenges"
       ]
     }
   ];
@@ -92,7 +67,7 @@ const Projects: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-4xl mx-auto">
           {projects.map((project, index) => (
             <div 
               key={index}
@@ -101,7 +76,7 @@ const Projects: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
               onClick={() => setSelectedProject(index)}
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-64 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -110,11 +85,11 @@ const Projects: React.FC = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 line-clamp-3">
+                <p className="text-muted-foreground mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 2).map((tech, i) => (
+                  {project.technologies.slice(0, 3).map((tech, i) => (
                     <span 
                       key={i}
                       className="text-xs px-2 py-1 rounded-full bg-portfolio-lavender text-portfolio-purple"
@@ -122,9 +97,9 @@ const Projects: React.FC = () => {
                       {tech}
                     </span>
                   ))}
-                  {project.technologies.length > 2 && (
+                  {project.technologies.length > 3 && (
                     <span className="text-xs px-2 py-1 rounded-full bg-portfolio-lavender text-portfolio-purple">
-                      +{project.technologies.length - 2} more
+                      +{project.technologies.length - 3} more
                     </span>
                   )}
                 </div>
