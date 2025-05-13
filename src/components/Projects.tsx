@@ -40,8 +40,8 @@ const Projects: React.FC = () => {
       title: "Mathematical Approach to Rubik's Cube",
       description: "Developed a comprehensive mathematical model to understand and solve Rubik's Cube puzzles using group theory and algorithms. Implemented solution algorithms based on mathematical principles.",
       technologies: ["Group Theory", "Algorithms", "Mathematical Modeling", "Computational Theory"],
-      // Using a reliable stock image of a Rubik's cube
-      image: "https://images.unsplash.com/photo-1577134351686-c6dca1c68d8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80",
+      // Using a more reliable image URL with a direct image of a Rubik's cube
+      image: "https://images.unsplash.com/photo-1591991564021-0662a6dd442e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80",
       details: [
         "Applied group theory to analyze the structure and properties of the Rubik's Cube",
         "Developed mathematical models to represent the cube's state and transformations",
@@ -81,6 +81,10 @@ const Projects: React.FC = () => {
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  onError={(e) => {
+                    console.error("Image failed to load:", project.image);
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1591991731833-b4807cf7ef94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80";
+                  }}
                 />
               </div>
               <div className="p-6">
@@ -129,6 +133,9 @@ const Projects: React.FC = () => {
                   src={projects[selectedProject].image} 
                   alt={projects[selectedProject].title}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1591991731833-b4807cf7ef94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80";
+                  }}
                 />
                 <button 
                   className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 flex items-center justify-center text-gray-800 hover:bg-white transition-colors"
