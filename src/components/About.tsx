@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const About: React.FC = () => {
@@ -35,12 +34,13 @@ const About: React.FC = () => {
   }, []);
 
   const skills = [
-    { name: 'Mathematics', level: 95 },
-    { name: 'Problem Solving', level: 90 },
-    { name: 'Programming', level: 85 },
-    { name: 'Mathematical Modeling', level: 88 },
-    { name: 'Data Analysis', level: 82 },
-    { name: 'Algorithm Design', level: 80 },
+    'Mathematics',
+    'Problem Solving',
+    'Programming',
+    'Mathematical Modeling',
+    'Data Analysis',
+    'OOP',
+    'DBMS',
   ];
 
   return (
@@ -77,21 +77,9 @@ const About: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-primary">My Skills</h3>
             <div className="space-y-4">
               {skills.map((skill, index) => (
-                <div key={index} className="mb-2">
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-primary">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5">
-                    <div 
-                      className="bg-gradient-to-r from-portfolio-purple to-portfolio-blue h-2.5 rounded-full" 
-                      style={{ 
-                        width: `${skill.level}%`,
-                        transition: 'width 1.5s ease-in-out',
-                        animationDelay: `${index * 150}ms`
-                      }}
-                    ></div>
-                  </div>
+                <div key={index} className="flex items-center">
+                  <div className="w-2 h-2 bg-gradient-to-r from-portfolio-purple to-portfolio-blue rounded-full mr-3"></div>
+                  <span className="font-medium">{skill}</span>
                 </div>
               ))}
             </div>

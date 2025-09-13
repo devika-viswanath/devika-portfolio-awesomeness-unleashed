@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const Education: React.FC = () => {
@@ -39,13 +38,13 @@ const Education: React.FC = () => {
       degree: "Master of Computer Applications (MCA)",
       institution: "RIT Kottayam",
       university: "APJ Abdul Kalam Technological University",
-      period: "2022 - Present",
+      period: "2026",
       description: "Currently pursuing MCA with focus on advanced programming, data structures, and software development principles."
     },
     {
       degree: "Bachelor of Science in Mathematics",
       institution: "Kerala University",
-      period: "2019 - 2022",
+      period: "2021-2024",
       description: "Completed BSc in Mathematics with distinction, focusing on pure and applied mathematics, including calculus, algebra, and mathematical modeling."
     }
   ];
